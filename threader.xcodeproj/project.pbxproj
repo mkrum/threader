@@ -28,6 +28,10 @@
 		388ED8631AB1341B00423A00 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED8621AB1341B00423A00 /* Security.framework */; };
 		388ED8651AB1342800423A00 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED8641AB1342800423A00 /* StoreKit.framework */; };
 		388ED8671AB1344400423A00 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED8661AB1344400423A00 /* libsqlite3.dylib */; };
+		388ED8731AB1412E00423A00 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED8711AB1412E00423A00 /* Bolts.framework */; };
+		388ED8741AB1412E00423A00 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED8721AB1412E00423A00 /* Parse.framework */; };
+		388ED8761AB1414D00423A00 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED8751AB1414D00423A00 /* Social.framework */; };
+		388ED87A1AB1417400423A00 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED8791AB1417400423A00 /* Accounts.framework */; };
 		38BCC7701AAF9F6E00468A36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BCC76F1AAF9F6E00468A36 /* main.m */; };
 		38BCC7731AAF9F6E00468A36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BCC7721AAF9F6E00468A36 /* AppDelegate.m */; };
 		38BCC7761AAF9F6E00468A36 /* threader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38BCC7741AAF9F6E00468A36 /* threader.xcdatamodeld */; };
@@ -71,6 +75,11 @@
 		388ED8621AB1341B00423A00 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		388ED8641AB1342800423A00 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		388ED8661AB1344400423A00 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		388ED8711AB1412E00423A00 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../Downloads/parse-library-1.6.4/Bolts.framework"; sourceTree = "<group>"; };
+		388ED8721AB1412E00423A00 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../Downloads/parse-library-1.6.4/Parse.framework"; sourceTree = "<group>"; };
+		388ED8751AB1414D00423A00 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		388ED8771AB1415E00423A00 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		388ED8791AB1417400423A00 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		38BCC76A1AAF9F6E00468A36 /* threader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BCC76E1AAF9F6E00468A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38BCC76F1AAF9F6E00468A36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +103,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				388ED87A1AB1417400423A00 /* Accounts.framework in Frameworks */,
+				388ED8761AB1414D00423A00 /* Social.framework in Frameworks */,
+				388ED8731AB1412E00423A00 /* Bolts.framework in Frameworks */,
+				388ED8741AB1412E00423A00 /* Parse.framework in Frameworks */,
 				388ED8671AB1344400423A00 /* libsqlite3.dylib in Frameworks */,
 				388ED7931AAFEA1800423A00 /* SystemConfiguration.framework in Frameworks */,
 				388ED8651AB1342800423A00 /* StoreKit.framework in Frameworks */,
@@ -130,6 +143,11 @@
 		388ED8681AB1344F00423A00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				388ED8791AB1417400423A00 /* Accounts.framework */,
+				388ED8771AB1415E00423A00 /* AdSupport.framework */,
+				388ED8751AB1414D00423A00 /* Social.framework */,
+				388ED8711AB1412E00423A00 /* Bolts.framework */,
+				388ED8721AB1412E00423A00 /* Parse.framework */,
 				388ED8661AB1344400423A00 /* libsqlite3.dylib */,
 				388ED8641AB1342800423A00 /* StoreKit.framework */,
 				388ED8621AB1341B00423A00 /* Security.framework */,
@@ -484,6 +502,7 @@
 					"$(inherited)",
 					"/Users/michaelkrumdick/Downloads/GoogleMaps-iOS-1.9.2",
 					"$(PROJECT_DIR)",
+					"/Users/michaelkrumdick/Downloads/parse-library-1.6.4",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,6 +524,7 @@
 					"$(inherited)",
 					"/Users/michaelkrumdick/Downloads/GoogleMaps-iOS-1.9.2",
 					"$(PROJECT_DIR)",
+					"/Users/michaelkrumdick/Downloads/parse-library-1.6.4",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
