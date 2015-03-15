@@ -32,6 +32,7 @@
 		388ED8741AB1412E00423A00 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED8721AB1412E00423A00 /* Parse.framework */; };
 		388ED8761AB1414D00423A00 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED8751AB1414D00423A00 /* Social.framework */; };
 		388ED87A1AB1417400423A00 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED8791AB1417400423A00 /* Accounts.framework */; };
+		388ED8801AB26D9700423A00 /* ThreadListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED87F1AB26D9700423A00 /* ThreadListView.m */; };
 		38BCC7701AAF9F6E00468A36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BCC76F1AAF9F6E00468A36 /* main.m */; };
 		38BCC7731AAF9F6E00468A36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BCC7721AAF9F6E00468A36 /* AppDelegate.m */; };
 		38BCC7761AAF9F6E00468A36 /* threader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38BCC7741AAF9F6E00468A36 /* threader.xcdatamodeld */; };
@@ -80,6 +81,8 @@
 		388ED8751AB1414D00423A00 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		388ED8771AB1415E00423A00 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		388ED8791AB1417400423A00 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		388ED87E1AB26D9700423A00 /* ThreadListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadListView.h; path = ../ThreadListView.h; sourceTree = "<group>"; };
+		388ED87F1AB26D9700423A00 /* ThreadListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThreadListView.m; path = ../ThreadListView.m; sourceTree = "<group>"; };
 		38BCC76A1AAF9F6E00468A36 /* threader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BCC76E1AAF9F6E00468A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38BCC76F1AAF9F6E00468A36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				38BCC7781AAF9F6E00468A36 /* ViewController.m */,
 				38BCC7A01AAFAA5D00468A36 /* MapViewController.h */,
 				38BCC7A11AAFAA5D00468A36 /* MapViewController.m */,
+				388ED87E1AB26D9700423A00 /* ThreadListView.h */,
+				388ED87F1AB26D9700423A00 /* ThreadListView.m */,
 				38BCC77A1AAF9F6E00468A36 /* Main.storyboard */,
 				38BCC77D1AAF9F6E00468A36 /* Images.xcassets */,
 				38BCC77F1AAF9F6E00468A36 /* LaunchScreen.xib */,
@@ -375,6 +380,7 @@
 				38BCC7A21AAFAA5D00468A36 /* MapViewController.m in Sources */,
 				38BCC7791AAF9F6E00468A36 /* ViewController.m in Sources */,
 				38BCC7701AAF9F6E00468A36 /* main.m in Sources */,
+				388ED8801AB26D9700423A00 /* ThreadListView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

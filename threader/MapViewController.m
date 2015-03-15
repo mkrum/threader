@@ -19,7 +19,6 @@
 @implementation MapViewController
 - (void)viewDidLoad {
         [super viewDidLoad];
-        self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager =[[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
         self.location = [[CLLocation alloc] init];
@@ -62,7 +61,9 @@
         // Create a rectangular path
         GMSMutablePath *rect = [GMSMutablePath path];
         [rect addCoordinate:CLLocationCoordinate2DMake([_coordinates[0] doubleValue], [_coordinates[1] doubleValue])];
+        _point1 = [PFGeoPoint geoPointWithLatitude:[_coordinates[0] doubleValue] longitude:[_coordinates[1] doubleValue]];
         [rect addCoordinate:CLLocationCoordinate2DMake([_coordinates[2] doubleValue], [_coordinates[3] doubleValue])];
+        _point2 = [PFGeoPoint geoPointWithLatitude:[_coordinates[2] doubleValue] longitude:[_coordinates[3] doubleValue]];
         [rect addCoordinate:CLLocationCoordinate2DMake([_coordinates[4] doubleValue], [_coordinates[5] doubleValue])];
         [rect addCoordinate:CLLocationCoordinate2DMake(coordinate.latitude, coordinate.longitude)];
         
@@ -90,6 +91,9 @@
 }
 -(void)alertView: (UIAlertView *) alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0){
+        PFObject *area = [PFObject objectWithClassName:@"area"];
+        [area setObject:_coordinates forKey:@"coordinates"];
+        [area saveInBackground];
         [_mapView clear];
     }
     if (buttonIndex == 1){
