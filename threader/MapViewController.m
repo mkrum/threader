@@ -10,6 +10,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <CoreLocation/CoreLocation.h>
 #import "GoogleMaps.h"
+#import "MoreInfoVIew.h"
 
 
 @interface ViewController ()
@@ -99,7 +100,8 @@
         PFObject *area = [PFObject objectWithClassName:@"area"];
         [area setObject:_coordinates forKey:@"coordinates"];
         [area saveInBackground];
-        
+        [self performSegueWithIdentifier:@"moreInfo" sender:self];
+
 
     }
     if (buttonIndex == 1){
