@@ -24,19 +24,26 @@
         self.location = [[CLLocation alloc] init];
         [self.locationManager requestWhenInUseAuthorization];
         if ([CLLocationManager instancesRespondToSelector:@selector(requestWhenInUseAuthorization)]){
-        [self.locationManager startUpdatingLocation];
-        self.location = self.locationManager.location;
-        NSLog(@"%f", self.location.coordinate.latitude);
-        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self.location.coordinate.latitude
-                                                                longitude:self.location.coordinate.longitude
-                                                                     zoom:15];
-        _mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-        _mapView.delegate = self;
-        self.view = _mapView;
-        _coordinates = [[NSMutableArray alloc]init];
-        self.tapCount = 0;
-        _path = [GMSMutablePath path];
-    }
+            [self.locationManager startUpdatingLocation];
+            self.location = self.locationManager.location;
+            NSLog(@"%f", self.location.coordinate.latitude);
+            GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self.location.coordinate.latitude
+                                                                    longitude:self.location.coordinate.longitude
+                                                                         zoom:15];
+            _mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+            _mapView.delegate = self;
+            self.view = _mapView;
+            _coordinates = [[NSMutableArray alloc]init];
+            self.tapCount = 0;
+            _path = [GMSMutablePath path];
+            UIButton *clear = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+            [clear setFrame:CGRectMake(290, 590, 50,50 )];
+            [clear setTitle:@"Reset" forState:UIControlStateNormal];
+            [clear addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+            [clear setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [clear setBackgroundColor:[UIColor whiteColor]];
+            [self.view addSubview:clear];
+        }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,15 +62,13 @@
     [_coordinates addObject:[NSNumber numberWithDouble: latitude]];
     [_coordinates addObject:[NSNumber numberWithDouble: longitude]];
     [_path addCoordinate:CLLocationCoordinate2DMake(coordinate.latitude, coordinate.longitude)];
-    GMSPolyline *line = [GMSPolyline polylineWithPath:_path];
-    line.map = mapView;
+    _line = [GMSPolyline polylineWithPath:_path];
+    _line.map = mapView;
     if (self.tapCount == 4){
         // Create a rectangular path
         GMSMutablePath *rect = [GMSMutablePath path];
         [rect addCoordinate:CLLocationCoordinate2DMake([_coordinates[0] doubleValue], [_coordinates[1] doubleValue])];
-        _point1 = [PFGeoPoint geoPointWithLatitude:[_coordinates[0] doubleValue] longitude:[_coordinates[1] doubleValue]];
         [rect addCoordinate:CLLocationCoordinate2DMake([_coordinates[2] doubleValue], [_coordinates[3] doubleValue])];
-        _point2 = [PFGeoPoint geoPointWithLatitude:[_coordinates[2] doubleValue] longitude:[_coordinates[3] doubleValue]];
         [rect addCoordinate:CLLocationCoordinate2DMake([_coordinates[4] doubleValue], [_coordinates[5] doubleValue])];
         [rect addCoordinate:CLLocationCoordinate2DMake(coordinate.latitude, coordinate.longitude)];
         
@@ -94,11 +99,25 @@
         PFObject *area = [PFObject objectWithClassName:@"area"];
         [area setObject:_coordinates forKey:@"coordinates"];
         [area saveInBackground];
-        [_mapView clear];
+        
+
     }
     if (buttonIndex == 1){
-        [_mapView clear];
+        [self set];
+
     }
+}
+-(void) set{
+    _tapCount = 0;
+    _coordinates = [[NSMutableArray alloc] init];
+    _path = [GMSMutablePath path];
+    _coordinates = [[NSMutableArray alloc]init];
+    [_mapView clear];
+    
+}
+
+-(void)buttonPressed: (UIButton *) button {
+    [self set];
 }
 
 

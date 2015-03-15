@@ -18,8 +18,7 @@
 @property (strong, nonatomic) CLLocationManager* locationManager;
 @property (strong, nonatomic) GMSMutablePath *path;
 @property (strong, nonatomic) GMSMapView *mapView;
-@property (strong, nonatomic) PFGeoPoint *point1;
-@property (strong, nonatomic) PFGeoPoint *point2;
+@property (strong, nonatomic) GMSPolyline *line;
 @property NSMutableArray *coordinates;
 @property int tapCount;
 @end

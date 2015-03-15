@@ -16,8 +16,5 @@
 -(void) viewDidLoad{
     
 }
--(BOOL)coordinate: (NSArray *) coordinate isInRegion: (NSArray *) cooridinates{
-    if cooridinate[0] 
-}
 
 @end
