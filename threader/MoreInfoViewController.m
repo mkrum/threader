@@ -10,6 +10,7 @@
 @interface UIViewController ()
 
 
+
 @end
 
 @implementation MoreInfoViewController
@@ -17,7 +18,12 @@
 -(void) viewDidLoad{
     
 }
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"%@",self.name.text);
+    [self.name resignFirstResponder];
+    return YES;
+}
 
 @end
 

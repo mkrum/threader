@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MoreInfoViewController : UIViewController
+@interface MoreInfoViewController : UIViewController <UITextFieldDelegate>
 @property NSMutableArray *coordinates;
+@property (weak, nonatomic) IBOutlet UITextField *name;
 
 @end
