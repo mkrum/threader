@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3829E8D51ABB1C970022EB8A /* MoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3829E8D41ABB1C970022EB8A /* MoreInfoViewController.m */; };
 		388ED7791AAFCF5D00423A00 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED7781AAFCF5D00423A00 /* CoreLocation.framework */; };
 		388ED77D1AAFCF8D00423A00 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED77C1AAFCF8D00423A00 /* GoogleMaps.framework */; };
 		388ED77F1AAFE98300423A00 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED77E1AAFE98300423A00 /* AVFoundation.framework */; };
@@ -33,7 +34,6 @@
 		388ED8761AB1414D00423A00 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED8751AB1414D00423A00 /* Social.framework */; };
 		388ED87A1AB1417400423A00 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED8791AB1417400423A00 /* Accounts.framework */; };
 		388ED8801AB26D9700423A00 /* ThreadListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED87F1AB26D9700423A00 /* ThreadListView.m */; };
-		388ED8831AB5430400423A00 /* MoreInfoVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED8821AB5430400423A00 /* MoreInfoVIew.m */; };
 		38BCC7701AAF9F6E00468A36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BCC76F1AAF9F6E00468A36 /* main.m */; };
 		38BCC7731AAF9F6E00468A36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BCC7721AAF9F6E00468A36 /* AppDelegate.m */; };
 		38BCC7761AAF9F6E00468A36 /* threader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38BCC7741AAF9F6E00468A36 /* threader.xcdatamodeld */; };
@@ -56,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3829E8D31ABB1C970022EB8A /* MoreInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoViewController.h; sourceTree = "<group>"; };
+		3829E8D41ABB1C970022EB8A /* MoreInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoViewController.m; sourceTree = "<group>"; };
 		388ED7781AAFCF5D00423A00 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		388ED77C1AAFCF8D00423A00 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../Downloads/GoogleMaps-iOS-1.9.2/GoogleMaps.framework"; sourceTree = "<group>"; };
 		388ED77E1AAFE98300423A00 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -84,8 +86,6 @@
 		388ED8791AB1417400423A00 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		388ED87E1AB26D9700423A00 /* ThreadListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadListView.h; path = ../ThreadListView.h; sourceTree = "<group>"; };
 		388ED87F1AB26D9700423A00 /* ThreadListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThreadListView.m; path = ../ThreadListView.m; sourceTree = "<group>"; };
-		388ED8811AB5430400423A00 /* MoreInfoVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoVIew.h; sourceTree = "<group>"; };
-		388ED8821AB5430400423A00 /* MoreInfoVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoVIew.m; sourceTree = "<group>"; };
 		38BCC76A1AAF9F6E00468A36 /* threader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BCC76E1AAF9F6E00468A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38BCC76F1AAF9F6E00468A36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -207,10 +207,10 @@
 				38BCC7781AAF9F6E00468A36 /* ViewController.m */,
 				38BCC7A01AAFAA5D00468A36 /* MapViewController.h */,
 				38BCC7A11AAFAA5D00468A36 /* MapViewController.m */,
-				388ED8811AB5430400423A00 /* MoreInfoVIew.h */,
-				388ED8821AB5430400423A00 /* MoreInfoVIew.m */,
 				388ED87E1AB26D9700423A00 /* ThreadListView.h */,
 				388ED87F1AB26D9700423A00 /* ThreadListView.m */,
+				3829E8D31ABB1C970022EB8A /* MoreInfoViewController.h */,
+				3829E8D41ABB1C970022EB8A /* MoreInfoViewController.m */,
 				38BCC77A1AAF9F6E00468A36 /* Main.storyboard */,
 				38BCC77D1AAF9F6E00468A36 /* Images.xcassets */,
 				38BCC77F1AAF9F6E00468A36 /* LaunchScreen.xib */,
@@ -380,12 +380,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3829E8D51ABB1C970022EB8A /* MoreInfoViewController.m in Sources */,
 				38BCC7761AAF9F6E00468A36 /* threader.xcdatamodeld in Sources */,
 				38BCC7731AAF9F6E00468A36 /* AppDelegate.m in Sources */,
 				38BCC7A21AAFAA5D00468A36 /* MapViewController.m in Sources */,
 				38BCC7791AAF9F6E00468A36 /* ViewController.m in Sources */,
 				38BCC7701AAF9F6E00468A36 /* main.m in Sources */,
-				388ED8831AB5430400423A00 /* MoreInfoVIew.m in Sources */,
 				388ED8801AB26D9700423A00 /* ThreadListView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
