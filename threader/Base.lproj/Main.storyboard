@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -141,8 +142,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Fd-uU-7AZ">
-                                <rect key="frame" x="252" y="285" width="97" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter Region Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyH-VE-chc">
+                                <rect key="frame" x="41" y="51" width="165" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Fd-uU-7AZ">
+                                <rect key="frame" x="200" y="51" width="384" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -152,17 +159,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="6Fd-uU-7AZ" secondAttribute="centerX" constant="-0.5" id="3A1-ou-DCk"/>
-                            <constraint firstAttribute="centerY" secondItem="6Fd-uU-7AZ" secondAttribute="centerY" id="6Z8-aW-kT2"/>
+                            <constraint firstItem="dyH-VE-chc" firstAttribute="top" secondItem="7Wq-mc-wDU" secondAttribute="bottom" constant="31" id="FLK-tg-f59"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Fd-uU-7AZ" secondAttribute="trailing" constant="108" id="FcR-I9-6OI"/>
+                            <constraint firstItem="dyH-VE-chc" firstAttribute="leading" secondItem="IYa-hP-NdY" secondAttribute="leadingMargin" constant="25" id="LHD-wY-2zJ"/>
+                            <constraint firstItem="6Fd-uU-7AZ" firstAttribute="leading" secondItem="dyH-VE-chc" secondAttribute="trailing" constant="26" id="wsp-q7-lCh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="name" destination="6Fd-uU-7AZ" id="Rqn-Oo-RzR"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="returnMain" id="eWN-xL-w6v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XB8-Mu-5DI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3361" y="725"/>
+            <point key="canvasLocation" x="3534" y="1409"/>
         </scene>
     </scenes>
 </document>

@@ -116,11 +116,7 @@
         [zone addObject:[NSNumber numberWithDouble:centerCoord.latitude]];
         [zone addObject:[NSNumber numberWithDouble:centerCoord.longitude]];
         [zone addObject:[NSNumber numberWithDouble:radius]];
-        PFObject *area = [PFObject objectWithClassName:@"area"];
-        [area setObject:_coordinates forKey:@"coordinates"];
-        [area setObject: zone forKey:@"zone"];
-        [area saveInBackground];
-        [self performSegueWithIdentifier:@"moreInfo" sender:self];
+                [self performSegueWithIdentifier:@"moreInfo" sender:self];
     }
     if (buttonIndex == 1){
         [self set];

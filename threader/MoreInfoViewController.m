@@ -7,6 +7,7 @@
 //
 
 #import "MoreInfoViewController.h"
+
 @interface UIViewController ()
 
 
@@ -20,7 +21,13 @@
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    [self performSegueWithIdentifier:@"returnMain" sender:self];
     NSLog(@"%@",self.name.text);
+    PFObject *area = [PFObject objectWithClassName:@"area"];
+    [area setObject:_coordinates forKey:@"coordinates"];
+    [area setObject: self.name.text forKey:@"Name"];
+    [area saveInBackground];
+
     [self.name resignFirstResponder];
     return YES;
 }
