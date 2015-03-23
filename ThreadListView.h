@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface ThreadListView : UITableViewController
+@property (retain) NSMutableArray *threads;
+@property (strong, nonatomic) PFQuery *query;
 
 @end

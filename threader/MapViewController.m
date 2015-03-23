@@ -24,7 +24,7 @@
     self.locationManager.delegate = self;
     self.location = [[CLLocation alloc] init];
     [self.locationManager requestWhenInUseAuthorization];
-    if ([CLLocationManager instancesRespondToSelector:@selector(requestWhenInUseAuthorization)]){
+    
         [self.locationManager startUpdatingLocation];
         self.location = self.locationManager.location;
         NSLog(@"%f", self.location.coordinate.latitude);
@@ -44,7 +44,6 @@
         [clear setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [clear setBackgroundColor:[UIColor whiteColor]];
         [self.view addSubview:clear];
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,26 +96,7 @@
 }
 -(void)alertView: (UIAlertView *) alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0){
-        CLLocationCoordinate2D centerCoord;
-        centerCoord.latitude = (CLLocationDegrees)(([_coordinates[0] doubleValue] + [_coordinates[2] doubleValue] + [_coordinates[4] doubleValue] + [_coordinates[6] doubleValue])/4);
-        centerCoord.longitude =(CLLocationDegrees)(([_coordinates[1] doubleValue] + [_coordinates[3] doubleValue] + [_coordinates[5] doubleValue] + [_coordinates[7] doubleValue])/4);
-        CLLocation *center = [[CLLocation alloc] initWithLatitude:centerCoord.latitude longitude:centerCoord.longitude];
-        double radius = 0;
-        CLLocationDistance distance = 0;
-        for (int i = 0; i < 6; i = i + 2){
-            CLLocationCoordinate2D temp;
-            temp.latitude = [_coordinates[i] doubleValue];
-            temp.longitude = [_coordinates[i+1] doubleValue];
-            CLLocation *loc = [[CLLocation alloc] initWithLatitude:temp.latitude longitude:temp.longitude];
-            distance = [loc distanceFromLocation:center];
-            if (distance > radius)
-                radius = distance;
-        }
-        NSMutableArray *zone = [[NSMutableArray alloc] init];
-        [zone addObject:[NSNumber numberWithDouble:centerCoord.latitude]];
-        [zone addObject:[NSNumber numberWithDouble:centerCoord.longitude]];
-        [zone addObject:[NSNumber numberWithDouble:radius]];
-                [self performSegueWithIdentifier:@"moreInfo" sender:self];
+                                [self performSegueWithIdentifier:@"moreInfo" sender:self];
     }
     if (buttonIndex == 1){
         [self set];
