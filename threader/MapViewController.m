@@ -96,7 +96,7 @@
 }
 -(void)alertView: (UIAlertView *) alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0){
-                                [self performSegueWithIdentifier:@"moreInfo" sender:self];
+        [self performSegueWithIdentifier:@"moreInfo" sender:self];
     }
     if (buttonIndex == 1){
         [self set];

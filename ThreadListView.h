@@ -12,5 +12,7 @@
 @interface ThreadListView : UITableViewController
 @property (retain) NSMutableArray *threads;
 @property (strong, nonatomic) PFQuery *query;
+@property (strong, nonatomic) CLLocation* location;
+@property (strong, nonatomic) CLLocationManager* locationManager;
 
 @end

@@ -44,6 +44,7 @@
     [zone addObject:[NSNumber numberWithDouble:centerCoord.latitude]];
     [zone addObject:[NSNumber numberWithDouble:centerCoord.longitude]];
     [zone addObject:[NSNumber numberWithDouble:radius]];
+    [area setObject:zone forKey:@"zone"];
     [area saveInBackground];
     [self.name resignFirstResponder];
     return YES;

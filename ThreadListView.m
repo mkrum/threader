@@ -7,6 +7,8 @@
 //
 
 #import "ThreadListView.h"
+#import <GoogleMaps/GoogleMaps.h>
+
 @interface UIViewController ()
 
 @end
@@ -15,6 +17,9 @@
 
 -(void) viewDidLoad{
     self.threads = [[NSMutableArray alloc]init];
+    self.locationManager = [[CLLocationManager alloc]init];
+    [self.locationManager startUpdatingLocation];
+    self.location = self.locationManager.location;
     [self.threads addObject:@""];
     [self populateThreads];
 }
@@ -22,22 +27,34 @@
 -(void) populateThreads{
     self.query = [PFQuery queryWithClassName:@"area"];
     [self.query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
         for (PFObject *object in objects) {
+            
+             CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(self.location.coordinate.latitude, self.location.coordinate.longitude);
+            NSMutableArray *locationData = [[NSMutableArray alloc]init];
+            [locationData addObjectsFromArray:[object objectForKey:@"coordinates"]];
+            GMSMutablePath *path = [[GMSMutablePath alloc]init];
+            for (int j = 0; j <=4; j = j + 2) {
+                [path addCoordinate:CLLocationCoordinate2DMake((CLLocationDegrees)[locationData[j] doubleValue], (CLLocationDegrees)[locationData[j + 1] doubleValue])];
+            }
+            GMSCoordinateBounds *region = [[GMSCoordinateBounds alloc]initWithPath:path];
+            if ([region containsCoordinate:loc]){
                 [self.threads addObject:[object objectForKey:@"Name"]];
             }
+            }
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             [self addView];
         });
     }];
 }
+
 -(void) addView{
     UITableView *myTableView    =   [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     myTableView.dataSource      =   self;
     myTableView.delegate        =   self;
     [self.view addSubview:myTableView];
 }
-
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
