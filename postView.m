@@ -16,6 +16,9 @@
 -(void) viewDidLoad{
     NSLog(self.name);
 }
+- (IBAction)addButton:(id)sender {
+    NSLog(@"pushed");
+}
 
 
 @end

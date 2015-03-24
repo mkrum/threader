@@ -10,5 +10,6 @@
 
 @interface postView : UITableViewController
 @property NSString *name;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *add;
 
 @end

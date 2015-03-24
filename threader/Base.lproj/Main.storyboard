@@ -108,13 +108,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="wu3-Of-JHv">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <items>
-                                <barButtonItem title="Item" id="Hyk-de-nX2"/>
-                            </items>
-                        </toolbar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ySM-bM-6rc">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -129,8 +122,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Posts" id="IX2-eJ-Aci">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="Ke1-3o-YSC"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="Ke1-3o-YSC">
+                            <connections>
+                                <action selector="addButton:" destination="JBP-i0-Hrh" id="GaP-ig-LBI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="add" destination="Ke1-3o-YSC" id="p7c-Q1-cZL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaX-Fu-7b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

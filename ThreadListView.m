@@ -78,7 +78,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.index = indexPath.row;
+    self.index = (int)indexPath.row;
     [self performSegueWithIdentifier:@"showPost" sender:self];
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

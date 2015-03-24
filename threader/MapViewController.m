@@ -27,7 +27,6 @@
     
         [self.locationManager startUpdatingLocation];
         self.location = self.locationManager.location;
-        NSLog(@"%f", self.location.coordinate.latitude);
         GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self.location.coordinate.latitude
                                                                 longitude:self.location.coordinate.longitude
                                                                      zoom:15];
