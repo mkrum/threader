@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3829E8D51ABB1C970022EB8A /* MoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3829E8D41ABB1C970022EB8A /* MoreInfoViewController.m */; };
+		3829E8DB1AC10FC40022EB8A /* postView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3829E8DA1AC10FC40022EB8A /* postView.m */; };
 		388ED7791AAFCF5D00423A00 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED7781AAFCF5D00423A00 /* CoreLocation.framework */; };
 		388ED77D1AAFCF8D00423A00 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED77C1AAFCF8D00423A00 /* GoogleMaps.framework */; };
 		388ED77F1AAFE98300423A00 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388ED77E1AAFE98300423A00 /* AVFoundation.framework */; };
@@ -58,6 +59,8 @@
 /* Begin PBXFileReference section */
 		3829E8D31ABB1C970022EB8A /* MoreInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoViewController.h; sourceTree = "<group>"; };
 		3829E8D41ABB1C970022EB8A /* MoreInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoViewController.m; sourceTree = "<group>"; };
+		3829E8D91AC10FC40022EB8A /* postView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = postView.h; path = ../postView.h; sourceTree = "<group>"; };
+		3829E8DA1AC10FC40022EB8A /* postView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = postView.m; path = ../postView.m; sourceTree = "<group>"; };
 		388ED7781AAFCF5D00423A00 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		388ED77C1AAFCF8D00423A00 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../Downloads/GoogleMaps-iOS-1.9.2/GoogleMaps.framework"; sourceTree = "<group>"; };
 		388ED77E1AAFE98300423A00 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -211,6 +214,8 @@
 				388ED87F1AB26D9700423A00 /* ThreadListView.m */,
 				3829E8D31ABB1C970022EB8A /* MoreInfoViewController.h */,
 				3829E8D41ABB1C970022EB8A /* MoreInfoViewController.m */,
+				3829E8D91AC10FC40022EB8A /* postView.h */,
+				3829E8DA1AC10FC40022EB8A /* postView.m */,
 				38BCC77A1AAF9F6E00468A36 /* Main.storyboard */,
 				38BCC77D1AAF9F6E00468A36 /* Images.xcassets */,
 				38BCC77F1AAF9F6E00468A36 /* LaunchScreen.xib */,
@@ -386,6 +391,7 @@
 				38BCC7A21AAFAA5D00468A36 /* MapViewController.m in Sources */,
 				38BCC7791AAF9F6E00468A36 /* ViewController.m in Sources */,
 				38BCC7701AAF9F6E00468A36 /* main.m in Sources */,
+				3829E8DB1AC10FC40022EB8A /* postView.m in Sources */,
 				388ED8801AB26D9700423A00 /* ThreadListView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

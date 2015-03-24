@@ -14,5 +14,7 @@
 @property (strong, nonatomic) PFQuery *query;
 @property (strong, nonatomic) CLLocation* location;
 @property (strong, nonatomic) CLLocationManager* locationManager;
+@property int index;
+
 
 @end

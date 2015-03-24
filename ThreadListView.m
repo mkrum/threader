@@ -8,6 +8,7 @@
 
 #import "ThreadListView.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "postView.h"
 
 @interface UIViewController ()
 
@@ -74,6 +75,17 @@
     cell.textLabel.text = [self.threads objectAtIndex:indexPath.row];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.index = indexPath.row;
+    [self performSegueWithIdentifier:@"showPost" sender:self];
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"showPost"]) {
+        postView* moreInfo = (postView *)segue.destinationViewController;
+        moreInfo.name = self.threads[self.index];
+    }
 }
 
 
